@@ -1,0 +1,12 @@
+.main {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  background-color: #a3cef1;
+  width: 40%;
+}
+.grid-item {
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 60px;
+  font-size: 30px;
+  text-align: center;
+}
