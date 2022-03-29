@@ -26,15 +26,17 @@ function playerClicked(i, j, element) {
     if ([rows[i], cols[j], diag, anti_diagonal].includes(3)) {
       message.innerHTML = "Player1 wins!!";
       TimeoutFunction();
+      return;
     } else if ([rows[i], cols[j], diag, anti_diagonal].includes(-3)) {
       message.innerHTML = "Player2 wins!!";
       TimeoutFunction();
+      return;
     }
     if (count === 9) {
       message.innerHTML = "draw";
       TimeoutFunction();
     }
-  } else return;
+  }
 }
 let gameTimeout;
 function TimeoutFunction() {
