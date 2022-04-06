@@ -81,6 +81,21 @@ class App extends React.Component {
     }
   };
 
+  reset = () => {
+    debugger;
+    this.setState({
+      player: 0,
+      count: 0,
+      rows: [0, 0, 0],
+      cols: [0, 0, 0],
+      diag: 0,
+      anti_diagonal: 0,
+      player1: [],
+      player2: [],
+      colorMap: new Map(),
+      message: "Who will be the winner?",
+    });
+  };
   render() {
     return (
       <div>
@@ -150,7 +165,10 @@ class App extends React.Component {
           ></GridItem>
         </div>
         <div>
-          <h2 id="winner">{this.state.message}</h2>
+          <h2 className="winner">{this.state.message}</h2>
+          <button className="reset" onClick={this.reset}>
+            Reset
+          </button>
         </div>
       </div>
     );
