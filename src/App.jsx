@@ -40,6 +40,7 @@ class App extends React.Component {
         this.setState({ player2: [...this.state.player2, id] });
       }
 
+      //record the players' steps
       let copiedRow = [...this.state.rows];
       let copiedCol = [...this.state.cols];
 
@@ -81,6 +82,7 @@ class App extends React.Component {
     }
   };
 
+  //RESET button - reset all the state
   reset = () => {
     debugger;
     this.setState({
